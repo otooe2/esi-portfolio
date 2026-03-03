@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Esi Afariwa Otoo | Thermal Systems & Energy Management</title>
+  <meta name="description" content="Esi Afariwa Otoo — MASc Mechanical Engineering candidate at McMaster. Thermal systems, energy storage, hybrid energy systems, and dynamic simulation." />
+  <style>
+    :root{
+      --bg:#0b0f17; --card:#111827; --muted:#9ca3af; --text:#e5e7eb; --accent:#60a5fa; --accent2:#34d399;
+      --border:rgba(255,255,255,.08);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(96,165,250,.18), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(52,211,153,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{color:var(--accent)}
+    .container{max-width:var(--max); margin:0 auto; padding:28px 18px 60px}
+    .nav{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,23,.65);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{max-width:var(--max); margin:0 auto; padding:12px 18px; display:flex; gap:14px; align-items:center; justify-content:space-between}
+    .brand{display:flex; flex-direction:column; gap:2px}
+    .brand strong{font-size:14px; letter-spacing:.2px}
+    .brand span{font-size:12px; color:var(--muted)}
+    .links{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+    .chip{font-size:12px; padding:8px 10px; border:1px solid var(--border); border-radius:999px; background:rgba(255,255,255,.03)}
+    .chip:hover{border-color:rgba(96,165,250,.35)}
+
+    .hero{padding:34px 0 18px}
+    .hero-grid{display:grid; grid-template-columns: 1.3fr .7fr; gap:16px}
+    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+    h1{font-size:44px; margin:0 0 8px; letter-spacing:-.7px}
+    .subtitle{color:var(--muted); font-size:15px; margin:0 0 16px}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      font-weight:600; font-size:13px;
+    }
+    .btn.primary{background:linear-gradient(135deg, rgba(96,165,250,.25), rgba(52,211,153,.18)); border-color:rgba(96,165,250,.35)}
+    .btn.primary:hover{border-color:rgba(52,211,153,.40)}
+    .btn:hover{border-color:rgba(96,165,250,.35)}
+
+    .card{background:rgba(17,24,39,.78); border:1px solid var(--border); border-radius:16px; padding:16px}
+    .card h3{margin:0 0 8px; font-size:14px}
+    .card p{margin:0; color:var(--muted); font-size:13px}
+
+    .section{padding:18px 0}
+    .section h2{margin:0 0 10px; font-size:18px; letter-spacing:-.2px}
+    .section .hint{color:var(--muted); font-size:13px; margin:0 0 14px}
+
+    .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    .item{background:rgba(17,24,39,.68); border:1px solid var(--border); border-radius:16px; padding:14px}
+    .item .top{display:flex; align-items:flex-start; justify-content:space-between; gap:10px}
+    .item h4{margin:0; font-size:14px}
+    .tag{font-size:11px; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:4px 8px; white-space:nowrap; background:rgba(255,255,255,.02)}
+    .item ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px}
+    .item li{margin:6px 0}
+
+    .two-col{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    @media (max-width:900px){.two-col{grid-template-columns:1fr}}
+
+    .kvs{display:flex; flex-direction:column; gap:10px}
+    .kv{display:flex; justify-content:space-between; gap:12px; padding:10px 12px; border:1px solid var(--border); border-radius:14px; background:rgba(255,255,255,.02)}
+    .kv b{font-size:13px}
+    .kv span{color:var(--muted); font-size:13px; text-align:right}
+
+    .footer{margin-top:22px; padding-top:16px; border-top:1px solid var(--border); color:var(--muted); font-size:12px; display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <strong>Esi Afariwa Otoo</strong>
+        <span>Thermal Systems • Energy Storage • Simulation</span>
+      </div>
+      <div class="links">
+        <a class="chip" href="#projects">Projects</a>
+        <a class="chip" href="#experience">Experience</a>
+        <a class="chip" href="#skills">Skills</a>
+        <a class="chip" href="#publications">Publications</a>
+        <a class="chip" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <h1>Thermal systems engineer-in-training<br/>building practical energy solutions.</h1>
+          <p class="subtitle">
+            MASc Mechanical Engineering candidate at McMaster University. I design and validate
+            electro-thermal models and closed-loop liquid cooling strategies for high-power energy storage systems.
+            I’m targeting roles in mechanical/energy systems where thermal and power constraints drive design.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn" href="#" id="resumeLink">Download resume (PDF)</a>
+            <a class="btn" href="#" id="linkedinLink">LinkedIn</a>
+          </div>
+          <p class="mono" style="margin-top:10px">Hamilton, Ontario • <span id="email">otooe2@mcmaster.ca</span> • <span id="phone">365-336-0549</span></p>
+        </div>
+        <div class="card">
+          <h3>Quick snapshot</h3>
+          <div class="kvs">
+            <div class="kv"><b>Focus</b><span>Battery/UC thermal management & energy modeling</span></div>
+            <div class="kv"><b>Tools</b><span>MATLAB/Simulink • ANSYS • AutoCAD • HAP/Trace</span></div>
+            <div class="kv"><b>Impact</b><span>−8°C peak pack temp • −7% voltage RMSE • +6% efficiency</span></div>
+            <div class="kv"><b>Background</b><span>Municipal water infrastructure (pumps, piping, reliability)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Selected projects</h2>
+      <p class="hint">Short, recruiter-friendly highlights. I can share deeper technical notes on request.</p>
+
+      <div class="grid">
+        <div class="item">
+          <div class="top">
+            <h4>EV Powertrains (Stellantis Collaboration)</h4>
+            <span class="tag">Thermal + Energy Systems</span>
+          </div>
+          <ul>
+            <li>Designed and optimized closed-loop liquid cooling strategies; reduced modeled peak temperatures by <b>8°C</b>.</li>
+            <li>Validated electro-thermal models; improved voltage prediction by <b>7% RMSE</b> under transient conditions.</li>
+            <li>Evaluated constraints-aware strategies; improved modeled energy efficiency by <b>6%</b> and driving range by <b>10%</b>.</li>
+          </ul>
+          <p class="mono">Stack: MATLAB/Simulink • ANSYS • Python • data validation</p>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <h4>Critical Heat Flux Prediction</h4>
+            <span class="tag">Heat Transfer + ML</span>
+          </div>
+          <ul>
+            <li>Built CHF prediction pipeline using CatBoost/XGBoost/Random Forest on U.S. NRC datasets.</li>
+            <li>Achieved <b>13% RMSE reduction</b> after hyperparameter optimization.</li>
+            <li>Communicated results with clean plots, error analysis, and model comparison tables.</li>
+          </ul>
+          <p class="mono">Stack: Python • scikit-learn • CatBoost • analysis notebooks</p>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <h4>Municipal Pump Station Reliability (Ghana Water)</h4>
+            <span class="tag">Hydronic Systems</span>
+          </div>
+          <ul>
+            <li>Cut unplanned downtime by <b>15%</b> across 10+ pump stations via condition-based inspections.</li>
+            <li>Built asset/inventory tracker; improved parts availability and reduced logging errors by <b>10%</b>.</li>
+            <li>Interpreted AutoCAD piping layouts to support upgrade/replacement planning.</li>
+          </ul>
+          <p class="mono">Stack: AutoCAD • Excel • Power BI • Airtable</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+      <div class="two-col">
+        <div class="item">
+          <div class="top">
+            <h4>Thermal Systems & Energy Management Research Assistant</h4>
+            <span class="tag">MARC • 2024–Present</span>
+          </div>
+          <ul>
+            <li>Closed-loop cooling design, thermal load calculations, and transient heat transfer modeling.</li>
+            <li>Pump/flow evaluation using pressure-drop modeling; thermal stability across full operating profiles.</li>
+            <li>Electro-thermal model validation and documentation-ready reporting for stakeholders.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="top">
+            <h4>Mechanical Systems & Instrumentation Teaching Assistant</h4>
+            <span class="tag">McMaster • 2025–Present</span>
+          </div>
+          <ul>
+            <li>Lead labs for 100+ students on sensor integration, calibration, and uncertainty.</li>
+            <li>Standardized SOPs; reduced recurring setup/calibration issues by <b>25%</b>.</li>
+            <li>Root-cause troubleshooting for drift, bias, noise, and configuration faults.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:12px">
+        <div class="item">
+          <div class="top">
+            <h4>Mechanical Engineer Intern — Infrastructure Operations</h4>
+            <span class="tag">Ghana Water • 2023</span>
+          </div>
+          <ul>
+            <li>Condition-based inspections across 10+ pump stations; <b>15%</b> downtime reduction.</li>
+            <li>Dashboards and recurring reporting; <b>20%</b> reduction in weekly reporting time.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="top">
+            <h4>Mechanical Engineering Intern — System Performance</h4>
+            <span class="tag">Ghana Water • 2022</span>
+          </div>
+          <ul>
+            <li>Diagnosed flow/pressure instability across 5+ distribution zones serving thousands.</li>
+            <li>Pump performance evaluation vs demand; preventive maintenance compliance for 50+ assets.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="item">
+          <div class="top"><h4>Engineering & design tools</h4><span class="tag">Core</span></div>
+          <ul>
+            <li>MATLAB/Simulink, ANSYS Workbench</li>
+            <li>AutoCAD, Revit, SolidWorks, Siemens NX</li>
+            <li>HAP, Trace 3D-Plus</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="top"><h4>Thermal & mechanical systems</h4><span class="tag">Transferable</span></div>
+          <ul>
+            <li>Thermal load calculation & heat transfer analysis</li>
+            <li>Hydronic loop evaluation: flow, pressure drop, pump performance</li>
+            <li>Electro-thermal model validation</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="top"><h4>Data & analytics</h4><span class="tag">Supporting</span></div>
+          <ul>
+            <li>Python (pandas, NumPy, scikit-learn, PyTorch/TensorFlow)</li>
+            <li>Power BI, Airtable</li>
+            <li>Clean reporting and visualization</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <h2>Publications</h2>
+      <div class="item">
+        <div class="top">
+          <h4>IEEE ITEC+EATS 2025</h4>
+          <span class="tag">Conference paper</span>
+        </div>
+        <p style="margin:10px 0 0; color:var(--muted); font-size:13px">
+          “iTransformer Based Voltage Estimation of Lithium-Ion Batteries.” DOI: <span class="mono">10.1109/ITEC63604.2025.11098056</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="hint">Fastest: email or LinkedIn. I respond quickly.</p>
+      <div class="two-col">
+        <div class="item">
+          <div class="top"><h4>Email</h4><span class="tag">Preferred</span></div>
+          <p style="margin-top:10px"><a href="mailto:otooe2@mcmaster.ca">otooe2@mcmaster.ca</a></p>
+        </div>
+        <div class="item">
+          <div class="top"><h4>LinkedIn</h4><span class="tag">Message</span></div>
+          <p style="margin-top:10px"><a href="#" id="linkedinLink2">Add your LinkedIn URL here</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Esi Afariwa Otoo</div>
+      <div class="mono">Built as a single-page portfolio • Update links for resume + LinkedIn</div>
+    </div>
+  </div>
+
+  <script>
+    // ---- TODO: update these 2 lines, then you’re done ----
+    const RESUME_URL = "resume.pdf"; // Put your PDF in the same folder and name it resume.pdf
+    const LINKEDIN_URL = "https://www.linkedin.com/in/YOUR-HANDLE";
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const resumeLink = document.getElementById('resumeLink');
+    resumeLink.href = RESUME_URL;
+    resumeLink.setAttribute('download', 'Esi_Otoo_Resume.pdf');
+
+    const l1 = document.getElementById('linkedinLink');
+    const l2 = document.getElementById('linkedinLink2');
+    l1.href = LINKEDIN_URL; l2.href = LINKEDIN_URL; l2.textContent = LINKEDIN_URL;
+  </script>
+</body>
+</html>
